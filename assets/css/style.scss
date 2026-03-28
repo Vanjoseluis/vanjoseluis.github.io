@@ -1,0 +1,33 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* ============================
+   Base typography
+   ============================ */
+
+body {
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ============================
+   Dark mode (auto)
+   ============================ */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0d1117;   /* dark background */
+    color: #c9d1d9;              /* dark text */
+  }
+
+  a {
+    color: #58a6ff;              /* blue dark */
+  }
+
+  h1, h2, h3 {
+    color: #e6edf3;              /* clearer titles  */
+  }
+}
