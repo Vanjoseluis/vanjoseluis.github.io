@@ -1,3 +1,5 @@
+[Home](../index.md)
+
 # Debugging a Non‑Deterministic Regression in pendulum_effort_test
 In early March 2026, a previously stable test in gz_ros2_control — pendulum_effort_test — began failing intermittently on Rolling.
 This note documents the debugging process, the root cause, and the final fix that was merged and backported across four ROS 2 distributions.
