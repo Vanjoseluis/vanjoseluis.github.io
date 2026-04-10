@@ -7,7 +7,10 @@ Each project reflects my focus on systems engineering, debugging, testing, and u
 Personal projects
 --
 
-## 🔍 [ros2-debug-assistant](https://github.com/Vanjoseluis/vanjoseluis.github.io/blob/main/projects/ros2-debug-assistant.md)
+## 🔍 ros2-debug-assistant
+
+[ros2-debug-assistant](https://github.com/Vanjoseluis/vanjoseluis.github.io/blob/main/projects/ros2-debug-assistant.md)
+
 Structural analysis and automatic fixes for ROS 2 packages
 
 A command‑line tool that detects formatting issues, missing dependencies, CMake problems, and common pitfalls in ROS 2 packages — and suggests or applies fixes automatically.
@@ -40,6 +43,7 @@ A research project for my undergraduate thesis: mining repository history to det
 Academic Projects
 ---
 🎓 [Academic Projects](https://github.com/Vanjoseluis/vanjoseluis.github.io/blob/main/projects/academic-projects.md)
+
 A collection of university projects focused on robotics, algorithms, systems engineering, and applied software development. These projects complement my personal tools and open‑source contributions.
 
 👉 Repository:
