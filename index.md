@@ -33,9 +33,19 @@ Details, design notes, and the 12‑week plan:
 👉 [GSoC 2026](gsoc-2026.md)
 
 ---
+## 📝 Projects
+Tools and infrastructure I am building for reproducible, introspectable ROS 2 development:
+- ros2-debug-assistant — structural analysis and automatic fixes for ROS 2 packages
+- autotest (planned) — deterministic CI for controllers and simulation
+- fastzebo (planned) — a modern, ROS‑native fast simulation backend
+- ecosystem analyzer (TFG) — PR/issue conflict graph for ros-controls maintainers
+
+👉 [Projects](projects/)
+
+---
 
 ## 📝 Technical Notes
-Short write‑ups on debugging, tests, controller_manager internals, and lessons learned while contributing to ros-controls.
+Short write‑ups on debugging, tests, controller_manager internals, and lessons learned while contributing to Open Source.
 
 👉 [Notes](notes/)
 
