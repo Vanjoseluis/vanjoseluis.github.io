@@ -4,6 +4,8 @@
 
 Contributions across Rolling → Jazzy → Humble → Kilted, focused on deterministic startup, CI stability, test coverage, and cross‑distro maintenance.
 
+👉 [Timeline View](contributions-timeline.md)
+
 ---
 
 ### 🧪 Initial‑Value Interface Testing  
