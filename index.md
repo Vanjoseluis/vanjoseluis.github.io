@@ -38,7 +38,7 @@ Details, design notes, and the 12‑week plan:
 
 # 🛠️ Projects
 
-This section collects the tools, academic work, and infrastructure I am building to improve reproducibility, introspection, and reliability in ROS 2 development.  
+This section summarizes the tools, academic work, and infrastructure I am building to improve reproducibility, introspection, and reliability in ROS 2 development.  
 Each project reflects my focus on systems engineering, debugging, testing, and upstream contributions to the ROS 2 control ecosystem.
 
 ---
@@ -48,138 +48,63 @@ Each project reflects my focus on systems engineering, debugging, testing, and u
 A collection of university and training projects focused on robotics, automation, digital electronics, and applied systems engineering.
 
 👉 Repository:  
-[https://github.com/Vanjoseluis/Academic_Projects](https://github.com/Vanjoseluis/Academic_Projects)
+https://github.com/Vanjoseluis/Academic_Projects
 
 ---
 
-## 🏭 GEMMA Based Control System for FMS 205 (TwinCAT 3)
+## 🏭 GEMMA Control System (TwinCAT 3)
+Modular PLC architecture for the FMS 205 manufacturing station using TwinCAT 3, GEMMA methodology, SFC/GRAFCET, and real industrial hardware (sensors, cylinders, encoder, conveyor).  
+Focus: deterministic task coordination, safe operation, and industry‑style control logic.
 
-**University of Málaga — School of Industrial Engineering (June 2025)**  
-Repository:  
-[https://github.com/Vanjoseluis/Academic_Projects/tree/main/GEMMA_FMS205](https://github.com/Vanjoseluis/Academic_Projects/tree/main/GEMMA_FMS205)
+## 🐧 Bash Obstacle Avoider for ROS 2
+Reactive obstacle avoidance implemented entirely in Bash using ROS 2 parameters, LaserScan, IMU, and odometry.  
+Focus: minimalist robotics tooling, CLI‑based control loops, and real‑time decision logic.
 
-Designed and implemented the complete control logic for the FMS 205 flexible manufacturing station using TwinCAT 3 and a fully modular PLC architecture.  
-The system integrates pneumatic actuators, industrial sensors, encoder‑based measurement, and a full HMI, following the GEMMA operational framework for safe and deterministic behavior.
+## 🐍 Python Obstacle Avoider for ROS 2
+ROS 2 node in Python implementing sector‑based obstacle avoidance with LaserScan, IMU, odometry, and Twist commands.  
+Focus: clean architecture, extensible navigation logic, and sensor‑driven control.
 
-**Key contributions:**
-- Modular PLC architecture (MAIN → Station Controller → Coordinator → Task FBs) using ST and SFC.  
-- GEMMA‑based operational modes: startup, shutdown, fault handling, recovery.  
-- Five independent SFC task modules with deterministic synchronization (Ready/Execute/Done/Ack).  
-- Integration of inductive, capacitive, photoelectric sensors, linear encoder, cylinders, vacuum ejector, conveyor.  
-- Full TwinCAT HMI with mode selection, counters, and real‑time visualization.  
-- Professional documentation: I/O mapping, module descriptions, sequence diagrams, control flow.
-
-**Impact:**
-- Clean, scalable, industry‑style PLC architecture.  
-- Deterministic task coordination and safe operation.  
-- Demonstrated strong capability in industrial automation and control logic design.
-
----
-
-## 🐧 Bash‑Based Naive Obstacle Avoider for ROS 2 (July 2025)
-
-Repository:  
-[https://github.com/Vanjoseluis/Academic_Projects/tree/main/Linux_TheConstruct_Project](https://github.com/Vanjoseluis/Academic_Projects/tree/main/Linux_TheConstruct_Project)
-
-A lightweight obstacle avoidance system built entirely with Bash scripting and ROS 2 parameters.  
-Uses LaserScan, odometry, and IMU data to drive robot motion through `cmd_vel` parameters — an educational alternative to Python/C++ nodes.
-
-**Features:**
-- Naive obstacle avoidance using front/left/right distance thresholds.  
-- Real‑time decision making via infinite Bash loops.  
-- Live telemetry printing (position, orientation, IMU, velocity).  
-- Modular design using `robot_functions.bash`.
-
-**Requirements:**
-- ROS 2 Humble (or compatible).  
-- Robot exposing `/robot_interface` parameters.  
-- `ros2 param` CLI.  
-- `bc` installed for float comparison.
-
----
-
-## 🐍 ROS 2 Obstacle Avoider in Python (July 2025)
-
-Repository:  
-[https://github.com/Vanjoseluis/Academic_Projects/tree/main/Python_TurtleBot_Project](https://github.com/Vanjoseluis/Academic_Projects/tree/main/Python_TurtleBot_Project)
-
-A ROS 2 node written in Python implementing reactive obstacle avoidance using LaserScan, IMU, odometry, and Twist commands.  
-Designed for TurtleBot‑like robots, providing a clean and extensible baseline for navigation and behavior‑based control.
-
-**Features:**
-- Obstacle avoidance using frontal sectors (left, center, right).  
-- Orientation tracking (yaw).  
-- Reactive algorithm: turn or move forward based on distance readings.  
-- Easily extendable logic for navigation, mapping, or behavior trees.
-
----
-
-## 🔌 Digital Electronics Project — Combinational & Sequential System Design (VHDL, FPGA)
-
-**University of Málaga — School of Industrial Engineering (May 2025)**  
-Repository:  
-[https://github.com/Vanjoseluis/Academic_Projects/tree/main/Digital_Electronics](https://github.com/Vanjoseluis/Academic_Projects/tree/main/Digital_Electronics)
-
-Designed and implemented two complementary digital systems using VHDL, combinational logic, and sequential finite state machines.  
-Includes analytical derivation, Karnaugh minimization, state machine modeling, schematic synthesis, simulation, and FPGA deployment on a Nexys3 board.
-
-**Subsystems:**
-- **Electronic Voting System** — combinational + sequential architecture for vote counting and evaluation.  
-- **Secure Door Control FSM** — deterministic state machine with safety constraints and timeout logic.
-
-**Key contributions:**
-- Full combinational subsystem: vote counter, seven‑segment controller, majority evaluator.  
-- Truth tables + Karnaugh maps for 256 combinations.  
-- Sequential subsystem (Reg_Vot) as Moore FSM.  
-- Supporting modules: ENA_GEN, Puls_On_Off, Ctrl_Leds.  
-- Secure door FSM with 5 states (A–E), error handling, deterministic transitions.  
-- Structured VHDL testbenches and FPGA deployment.  
-- Simulation chronograms and timing validation.
+## 🔌 Digital Electronics (VHDL, FPGA)
+Two digital systems (Voting System + Secure Door FSM) designed with VHDL, combinational logic, Karnaugh minimization, Moore FSMs, and FPGA deployment.  
+Focus: deterministic hardware behavior, timing analysis, and structured testbenches.
 
 ---
 
 # 🧰 Personal Projects
 
-These projects focus on developer tooling, deterministic testing, simulation performance, and ecosystem analysis for ROS 2.
+Developer tooling and infrastructure aimed at improving reproducibility, debugging, and simulation reliability in ROS 2.
 
 ---
 
 ## 🔍 ros2-debug-assistant
-
-Page:  
-[ros2-debug-assistant](https://github.com/Vanjoseluis/vanjoseluis.github.io/blob/main/projects/ros2-debug-assistant.md)  
-Repository:  
-[https://github.com/Vanjoseluis/ros2-debug-assistant](https://github.com/Vanjoseluis/ros2-debug-assistant)
-
-Structural analysis and automatic fixes for ROS 2 packages.  
-Detects formatting issues, missing dependencies, CMake problems, and common pitfalls — and suggests or applies fixes automatically.
-
----
+Static analysis and automatic fixes for ROS 2 packages.  
+Detects formatting issues, linter errors, missing dependencies, and CMake/manifest problems, with an interactive fix engine and modular architecture (CLI, analyzer, fixer, utils).  
+Roadmap: ament_lint integration, dependency validation, launch/test diagnostics, VSCode extension.
 
 ## 🧪 autotest (planned)
-
-Deterministic CI for controllers and simulation.  
-A testing framework for reproducible controller validation, multi‑run consistency checks, and automated regression detection in `ros2_control` and `gz_ros2_control`.
-
-👉 Project page coming soon
-
----
+Deterministic CI framework for `ros2_control` and `gz_ros2_control`.  
+Provides multi‑run consistency checks, timing stability analysis, and automated regression detection for controllers and simulation pipelines.
 
 ## 🏎️ fastzebo (planned)
+Exploration of a modern, ROS‑native fast simulation backend.  
+Aims to improve startup determinism, reduce physics jitter, and optimize sensor/physics loops for high‑performance robotics simulation.
 
-A modern, ROS‑native fast simulation backend.  
-Explores faster, more deterministic simulation pipelines for ROS 2, bridging traditional simulators and high‑performance physics engines.
-
-👉 Project page coming soon
+## 🕸️ ecosystem analyzer (TFG)
+Graph‑based analysis of PR/Issue interactions in ros‑controls.  
+Detects conflicting PRs, dependency chains, regressions, and cross‑distro divergence to support maintainers and reduce integration risk.
 
 ---
 
-## 🕸️ ecosystem analyzer (TFG)
+# 📌 Notes
 
-PR/Issue conflict graph for ros‑controls maintainers.  
-Undergraduate thesis project analyzing repository history to detect conflicting PRs, dependency chains, and structural risks in the ros‑controls ecosystem.
+Each project has its own dedicated page with:
+- goals  
+- architecture  
+- roadmap  
+- repository links  
+- design notes  
 
-👉 Project page coming soon
+More projects will be added as they evolve.
 
 ---
 
