@@ -4,4 +4,4 @@ Short write‑ups on debugging, tests, controller_manager internals, and lessons
 
 ## Notes
 
-- [Debugging a non‑deterministic regression in `pendulum_effort_test`](notes/pendulum-effort-debug.md)
+- [Debugging a non‑deterministic regression in `pendulum_effort_test`](pendulum-effort-debug.md)
